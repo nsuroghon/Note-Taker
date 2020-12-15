@@ -2,12 +2,12 @@
 const express = require('express');
 const path = require ('path');
 const bodyParser = require('body-parser');
+const { json } = require('body-parser');
 
 // app
 const app = express();
 const PORT = 3000;
 // const http = require('http');
-// const { response } = require('express');
 
 // const handleRequest = (request, response) => {
 //     response.end(
@@ -21,20 +21,15 @@ app.use(express.json());
 
 // support parsing of application/json type post data
 app.use(bodyParser.json());
-//support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.get('/', function (req, res) {
-//     res.end('Hello World')
-// });
 
-//opens to index.html
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
 
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'public/notes.html')));
 
-
-// const server = http.createServer();
+// * `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
+app.get('/api/notes', (req, res) => res.json(json));
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () => {
