@@ -1,4 +1,5 @@
 // dependencies
+const { json } = require('body-parser');
 const express = require('express');
 const fs = require('fs');
 const path = require ('path');
@@ -15,8 +16,6 @@ app.use(express.json());
 // notes array
 let notes = [];
 
-
-module.exports = (app) => {
 // html routes 
   app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
   app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'public/notes.html')));
@@ -34,9 +33,10 @@ module.exports = (app) => {
   app.post('/api/notes', (req, res) => {
     const addNote = req.body; 
     notes.push(addNote);
+    fs.writeFile(path.join(__dirname,'./db/db.json'), JSON.stringify(notes));
     res.json(addNote);
   });
-}
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () => {
