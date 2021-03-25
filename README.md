@@ -15,7 +15,7 @@ A note taking app that allows users to create, save and delete posts.
 [Visit Application Here](https://shrouded-savannah-38288.herokuapp.com)
 
 ## Preview
-![Preview](https://github.com/nsuroghon/Employee-Directory/blob/main/Screen%20Shot%202021-03-24%20at%2010.14.19%20AM.png)
+![Preview](https://github.com/nsuroghon/Note-Taker/blob/main/Screen%20Shot%202021-03-25%20at%2012.41.45%20PM.png)
 
 ## License
 MIT License.
