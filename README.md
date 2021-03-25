@@ -1,26 +1,24 @@
-# Note Taker
+# React Employee Directory
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 * [Description](#description)
-* [Installation Guide](#installation)
-* [Usage Information](#usage)
-* [Contributions](#contribution)    
-* [Test Instructions](#tests)
+* [Visit](#visit)
+* [Preview](#preview)
 * [License](#license)
 
 ## Description
-This application utilizes an Express.js back-end to store notes made by the user.
+A note taking app that allows users to create, save and delete posts. 
 
-## Installation
-The application can be cloned from this repository and opened locally using node.js.
+## Visit
+[Visit Application Here](https://nsuroghon.github.io/Employee-Directory/)
 
-## Usage
-The Note Taker app allows the user to create a note title and note text to save and edit for future use. 
+## Preview
+![Preview](https://github.com/nsuroghon/Employee-Directory/blob/main/Screen%20Shot%202021-03-24%20at%2010.14.19%20AM.png)
 
 ## License
-MIT
+MIT License.
 
 ## More Info
 Github: https://github.com/nsuroghon
